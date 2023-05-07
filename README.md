@@ -15,4 +15,4 @@ Datenanalyse: Die Cloud-Anwendung bietet eine leistungsstarke Datenanalyse-Engin
 
 Installation
 
-Die Installation von SunLoggerCloud ist einfach und erfordert keine speziellen Kenntnisse. Sie müssen nur das beiliegende Handbuch befolgen, um das Solarpanel, den Batteriespeicher, den Raspberry Pi und den Datenlogger einzurichten. Die Cloud-Anwendung ist bereits eingerichtet und kann über einen Webbrowser aufgerufen werden.
+Die Installation von SunLoggerCloud ist einfach und erfordert einfache Kenntnisse über Pi usw. Mehr kommt hier später...., um das Solarpanel, den Batteriespeicher, den Raspberry Pi und den Datenlogger einzurichten. Die Cloud-Anwendung ist bereits eingerichtet und kann über einen Webbrowser aufgerufen werden.
