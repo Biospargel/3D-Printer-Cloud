@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auftragsstatus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .status-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .status-container h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .status-container p {
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-container {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(to right, #3498db, #2980b9);
+            width: 0;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+            animation: pulseAnimation 2s infinite;
+            transition: width 0.3s ease-in-out;
+        }
+
+        @keyframes pulseAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .cancel-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            clear: both;
+        }
+
+        .cancel-button:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="status-container">
+        <h1>Auftragsstatus</h1>
+        <p>Drucker: <span id="drucker"></span></p>
+        <p>Material: <span id="material"></span></p>
+        <p>Datei: <span id="datei"></span></p>
+
+        <div class="progress-bar-container">
+            <p>Status: <span id="status">Datei wird verarbeitet und an Drucker gesendet!</span></p>
+            <div class="progress-bar">
+                <span id="progress-bar" style="width: 10%;"></span>
+            </div>
+        </div>
+
+        <a href="auftrag_abgebrochen.html" class="cancel-button" onclick="cancelOrder()">Auftrag abbrechen</a>
+    </div>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        const material = getParameterByName('material');
+        const drucker = getParameterByName('drucker');
+        const datei = getParameterByName('datei');
+        const laufendeNummer = getParameterByName('timestamp');
+
+        document.getElementById('material').innerText = material || 'Nicht ausgewählt';
+        document.getElementById('drucker').innerText = drucker || 'Nicht ausgewählt';
+        document.getElementById('datei').innerText = `${laufendeNummer}_${datei}` || 'Nicht ausgewählt';
+
+        function cancelOrder() {
+            alert('Auftrag wurde abgebrochen.');
+        }
+
+        const progressBar = document.getElementById('progress-bar');
+        progressBar.style.animation = 'progressBarAnimation 2s linear forwards';
+    </script>
+</body>
+
+</html>

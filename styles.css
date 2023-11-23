@@ -1,0 +1,138 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+}
+
+.header {
+    color: #2d4059;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.label {
+    margin-top: 10px;
+    color: #4f6d7a;
+}
+
+.input,
+.select {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #95afc0;
+    border-radius: 5px;
+}
+
+.button,
+.cancel-button {
+    margin-top: 20px;
+    padding: 12px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.button {
+    background-color: #3d5a80;
+}
+
+.button:hover {
+    background-color: #334e7e;
+}
+
+.cancel-button {
+    background-color: #c06c84;
+}
+
+.cancel-button:hover {
+    background-color: #a55b6c;
+}
+
+@keyframes progressBarAnimation {
+    0% { width: 10%; }
+    100% { width: 10%; }
+}
+
+.status-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+}
+
+.status-container h1 {
+    color: #2d4059;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.status-container p {
+    margin-bottom: 10px;
+    color: #4f6d7a;
+}
+
+.progress-bar-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #d2dae2;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #3d5a80;
+    width: 10%;
+    transition: width 0.3s ease-in-out;
+}
+
+.status-container .cancel-button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    display: block;
+    clear: both;
+}
+
+.status-container .cancel-button {
+    background-color: #c06c84;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.status-container .cancel-button:hover {
+    background-color: #a55b6c;
+}

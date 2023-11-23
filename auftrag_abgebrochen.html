@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auftrag abgebrochen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .cancellation-message {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cancellation-message h1 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .home-button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="cancellation-message">
+        <h1>Auftrag abgebrochen</h1>
+        <p class="confirmation-text">Der Druckauftrag wurde erfolgreich abgebrochen. Wenn der Druck schon gestartet ist werden die Kosten ihnen in Rechnung gestellt.</p>
+        <a href="index.html" class="home-button">Akzeptieren und Fortfahren</a>
+    </div>
+</body>
+</html>

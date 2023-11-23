@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D-Druck Datei-Upload Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">3D-Druck-Portal</h1>
+
+    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+      <label for="file" class="label">Wählen Sie eine 3D-Druckdatei (nicht slicen):</label><br>
+      <input type="file" name="file" id="file" class="input"><br>
+
+      <label for="printer" class="label">Drucker:</label>
+      <select id="printer" name="printer" class="input">
+        <option value="printer1">Drucker 1</option>
+        <option value="printer2">Drucker 2</option>
+        <option value="printer3">Drucker 3</option>
+        <option value="printer4">Drucker 4</option>
+      </select><br>
+
+      <label for="filament" class="label">Filament:</label>
+      <select id="filament" name="filament" class="input">
+        <option value="pla">PLA</option>
+        <option value="abs">ABS</option>
+        <option value="petg">PETG</option>
+        <option value="tpu">TPU</option>
+        <option value="nylon">Nylon</option>
+      </select><br>
+
+      <label for="color" class="label">Farbe:</label>
+      <select id="color" name="color" class="input">
+        <option value="red">Rot</option>
+        <option value="blue">Blau</option>
+        <option value="green">Grün</option>
+        <option value="black">Schwarz</option>
+        <option value="white">Weiß</option>
+        <option value="yellow">Gelb</option>
+        <option value="orange">Orange</option>
+      </select><br>
+
+      <button type="submit" class="button">Datei hochladen und Druck starten, AGB's werden akzeptiert!</button>
+      <p style="margin-bottom: 20px;"></p>
+    </form>
+
+    <div class="footer">
+      <a href="/impressum.html" class="footer-button">Impressum</a> 
+      <a href="/datenschutz.html" class="footer-button">Datenschutz</a>
+      <a href="/agb_datei1.html" class="footer-button">AGB's</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
