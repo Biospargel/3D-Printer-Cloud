@@ -4,6 +4,7 @@
 
 </head>
 <body>
+<body style="background-color: #c6ced4;">
     <div class="status-container">
  
 

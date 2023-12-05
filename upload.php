@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["file"])) {
     $uploadDirectory = "uploads/";
-    $allowedFileTypes = ["stl", "obj", "gcode"];
-    $maxFileSize = 5 * 1024 * 1024;
+    $allowedFileTypes = ["stl", "obj", "stp"];
+    $maxFileSize = 15 * 1024 * 1024;
 
     $file = $_FILES["file"];
     $fileName = $file["name"];

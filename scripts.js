@@ -27,3 +27,9 @@ function submitForm(event) {
 
     alert('Formular erfolgreich gesendet!');
 }
+
+// Bootstrap: Aktivieren Sie alle Popovers und Tooltips
+$(function () {
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip();
+});

@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #c6ced4;
             margin: 0;
             padding: 0;
             display: flex;
@@ -126,7 +126,7 @@
         document.getElementById('datei').innerText = `${laufendeNummer}_${datei}` || 'Nicht ausgewählt';
 
         function cancelOrder() {
-            alert('Auftrag wurde abgebrochen.');
+            alert('Auftrag wurde abgebrochen, Drucker wird gestoppt, falls Druck schon gestartet bitte die AGBs beachten!');
         }
 
         const progressBar = document.getElementById('progress-bar');
