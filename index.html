@@ -6,9 +6,23 @@
   <title>3D-Druck Datei-Upload Portal</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #c6ced4;
+      font-family: "Lato", sans-serif;
+    }
+  </style>
 </head>
 <body>
-    <body style="background-color: #c6ced4;">
+  
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="/dev.html">DEV</a>
+    <a href="/impressum.html">Impressum</a>
+    <a href="/datenschutz.html">Datenschutz</a>
+    <a href="/agb_datei1.html">AGB's</a>
+  </div>
+
   <div class="container">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
       Die Seite ist noch in der Testphase!
@@ -18,6 +32,7 @@
     </div>
 
     <h1 class="header">3D-Druck-Portal</h1>
+    <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
     <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
       <label for="file" class="label">Wählen Sie eine 3D-Druckdatei (nicht slicen):</label><br>
       <input type="file" name="file" id="file" class="input"><br>
@@ -52,13 +67,12 @@
 
       <button type="submit" class="button">Datei hochladen und Druck starten, AGB's werden akzeptiert!</button>
       <p style="margin-bottom: 20px;"></p>
+
     </form>
 
-    <div class="footer">
-         <a href="https://github.com/Biospargel/3D-Printer-Cloud" class="footer-button">V1.1 (beta)</a>
-      <a href="/impressum.html" class="footer-button">Impressum</a> 
-      <a href="/datenschutz.html" class="footer-button">Datenschutz</a>
-      <a href="/agb_datei1.html" class="footer-button">AGB's</a>
+    <div class="footer-buttons">
+      <button class="footer-button login-button" onclick="openNav()">Infos zur Nutzung</button>
+      <a href="https://dash.infinityfree.com/accounts/if0_35072896" class="footer-button login-button">Login</a>
     </div>
   </div>
 
@@ -66,6 +80,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

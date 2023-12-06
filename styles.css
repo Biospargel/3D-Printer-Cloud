@@ -11,6 +11,81 @@ body {
     justify-content: center;
     height: 100vh;
 }
+body {
+  background-color: #c6ced4;
+  font-family: "Lato", sans-serif;
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 400px; /* Erhöhen Sie die Höhe des Side Menüs nach Bedarf */
+  top: 0;
+  left: 0;
+  background-color: #c6ced4; /* Hintergrundfarbe des Side Menüs */
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000; /* Textfarbe der Links im Side Menü als Schwarz */
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #000; /* Textfarbe der Links im Side Menü bei Hover als Schwarz */
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  bottom: 8px; /* Ändern Sie die Position des Close-Buttons auf der Unterseite */
+  right: 25px;
+  font-size: 36px;
+  color: #000; /* Textfarbe des Schließen-Buttons als Schwarz */
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #c6ced4; /* Hintergrundfarbe des "Rechtliches"-Buttons */
+  color: #000; /* Textfarbe des "Rechtliches"-Buttons als Schwarz */
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #c6ced4; /* Hintergrundfarbe des "Rechtliches"-Buttons bei Hover */
+}
+
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.emoji-container {
+    animation: pulse 2s infinite alternate; /* Verwenden Sie eine CSS-Animation namens "pulse" */
+}
+
+.emoji {
+    font-size: 40px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1); /* Start mit normaler Größe */
+    }
+    to {
+        transform: scale(1.5); /* Endet mit 1,5-facher Größe */
+    }
+}
 
 .container {
     background-color: #ffffff;
@@ -28,6 +103,27 @@ body {
     margin-bottom: 20px;
 }
 
+/* Ändern Sie den Selektor auf .status-container.alert, um spezifischer zu sein */
+.status-container.alert {
+    background-color: #4caf50; /* Ändern Sie die Hintergrundfarbe hier auf Grün (#4caf50) */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: left;
+}
+
+.status-container.alert h1 {
+    color: #ffffff; /* Ändern Sie die Textfarbe auf Weiß (#ffffff) für bessere Lesbarkeit */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.status-container.alert p {
+    margin-bottom: 10px;
+    color: #ffffff; /* Ändern Sie die Textfarbe auf Weiß (#ffffff) */
+}
 .label {
     margin-top: 10px;
     color: #4f6d7a;
@@ -139,7 +235,68 @@ body {
     background-color: #a55b6c;
 }
 
-/* Bootstrap Alert Styles */
+
 .alert {
     margin-bottom: 20px;
+}
+
+
+/* FOOTER begins here... */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-button {
+    margin-right: 10px;
+    background-color: #3d5a80;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for links */
+}
+
+.footer-button:hover {
+    background-color: #334e7e;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #3d5a80;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(220, 220, 220, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(255, 251, 251);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #d9d9d9;
+}
+
+.show {
+    display: block;
 }

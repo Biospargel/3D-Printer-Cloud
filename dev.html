@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test und Beta Funktionen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color: #c6ced4;">
+    <div class="container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            Die Seite ist noch in der Testphase!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <h1 class="header">Test und Beta Funktionen</h1>
+
+        <div class="status-container alert">
+            <div style="display: flex; align-items: center;">
+                <h1 style="margin-right: 10px;">Serverstatus</h1>
+                <div class="emoji-container">
+                    <div class="emoji" style="margin-bottom: 5px;">📡</div>
+                </div>
+            </div>
+            <p>Der Server ist derzeit online und funktioniert einwandfrei.</p>
+        </div>
+
+        <!-- Hier können Sie zusätzliche Beta-Funktionen hinzufügen -->
+        <div class="beta-features-container">
+            <h1>Neue Funktionen</h1>
+            <p>Hier sind einige der neuesten Funktionen, die Sie in der Beta-Version testen können:</p>
+            <ul>
+                <li><a href="upload_portal.html">Live Vorschau der hochgeladenen Datei</a></li>
+                <li>Erweiterte Dateiformatunterstützung</li>
+                <li>Live-Chat-Support</li>
+            </ul>
+        </div>
+
+        <!-- Uhrzeit und Speicherplatz -->
+        <div id="time-container">
+            <p>Aktuelle Uhrzeit: <span id="current-time"></span></p>
+            <p>Verfügbarer Speicherplatz: <span id="free-space"></span></p>
+        </div>
+        
+        <div class="footer">
+            <a href="index.html" class="btn btn-primary">Zurück</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Fügen Sie hier Ihre JS-Dateien hinzu, wenn vorhanden -->
+    <script src="script.js"></script>
+    <script>
+        // Funktion, um die Uhrzeit zu aktualisieren
+        function updateTime() {
+            const currentTimeElement = document.getElementById('current-time');
+            const currentDateTime = new Date();
+            const currentTimeString = currentDateTime.toLocaleTimeString();
+            currentTimeElement.textContent = currentTimeString;
+        }
+
+        // Funktion, um den verfügbaren Speicherplatz zu aktualisieren (nur ein Beispiel, Sie müssen dies an Ihre Anforderungen anpassen)
+        function updateFreeSpace() {
+            const freeSpaceElement = document.getElementById('free-space');
+            const freeSpace = "4.7 GB"; // Hier den tatsächlichen verfügbaren Speicherplatz abrufen
+            freeSpaceElement.textContent = freeSpace;
+        }
+
+        // Funktionen initial aufrufen
+        updateTime();
+        updateFreeSpace();
+
+        // Uhrzeit regelmäßig aktualisieren (z.B., alle 1 Sekunde)
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

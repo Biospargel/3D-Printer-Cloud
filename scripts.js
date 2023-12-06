@@ -33,3 +33,44 @@ $(function () {
     $('[data-toggle="popover"]').popover();
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+document.getElementById('backButton').addEventListener('click', function() {
+  goBack();
+});
+
+function goBack() {
+  window.history.back();
+}
+//Menu
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+document.addEventListener('DOMContentLoaded', function () {
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+
+  // "Rechtliches"-Button hinzugefügt
+  var rechtlichesButton = document.getElementById("rechtlichesButton");
+  if (rechtlichesButton) {
+    rechtlichesButton.addEventListener("click", function () {
+      openNav(); // Öffnet das Sidepanel
+    });
+  }
+
+  // Schließt das Sidepanel, wenn der "Rechtliches"-Button im Panel gedrückt wird
+  var closeBtnInsidePanel = document.querySelector(".sidepanel .closebtn");
+  if (closeBtnInsidePanel) {
+    closeBtnInsidePanel.addEventListener("click", function () {
+      closeNav();
+    });
+  }
+});
